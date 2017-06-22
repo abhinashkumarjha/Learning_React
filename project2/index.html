@@ -23,8 +23,45 @@
 	<script src="https://fb.me/react-dom-0.14.6.js"></script>
 	<script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
 	<script type="text/jsx">
+	 var HeadClass = React.createClass({
+		 	render: function(){
+		 				return(
+		 					<h1>Heading 1</h1>
+		 				);
+		 			}	
+	 	});
+
+	 var ParaClass = React.createClass({
+	 		render:function(){
+		 			return(
+		 				<p>This is a Para. this is a Para</p> 
+		 				);
+		 		}
+	 	});
+
+
+	 var DivClass = React.createClass({
+	 		render: function(){
+		 		var divStyle = {
+		            width: 300,
+		            textAlign: "center",
+		            backgroundColor: "black",
+		            padding: 40,
+		            fontFamily: "sans-serif",
+		            color: "#999",
+		            borderRadius: 10
+	          	};
+
+		 		return(
+			 		<div style={divStyle}>
+			 			<HeadClass/>
+			 			<ParaClass/>
+			 		</div>
+		 		);
+	 	}
+	 });
 		ReactDOM.render(
-			<h1>Shelork Homes!</h1>,document.getElementById("container")
+			<DivClass/>,document.getElementById("container")
 		);
 	</script>
 </html>
